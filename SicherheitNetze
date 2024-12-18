@@ -1,0 +1,46 @@
+1. How many hosts can you use? How many valid IP host addresses are available?
+    8 bits = 2^8 = 256
+    2 bits reserved for network and broadcast adress -> 254 available adresses 
+2. 64.99.1.0 mit 8 bits 
+    128 64 32 16 8 4 2 1
+    01000000.01100011.00000001.00000000
+
+    255.255.255.0
+    11111111.11111111.11111111.00000000
+
+3. If you split the last 8 bit into network section and host section, how can you generate at least 17 subnets? Where will the 
+    border between the network section and the host section be? Please represent this with bitwise numbers:
+    17 can be generated with 32 -> 2^5=32
+    new mask: 24 + 5 = 29
+    -> 11111111.11111111.11111111.11111000
+
+
+        1. How many hosts can you represent in such a subnetwork?
+        2^3 ( 3 empty bits) = 8
+        -> 6 usable hosts (without network and broadcast adress)
+
+        2. Please represent all valid IP-addresses in the first six subnets. Please write this up bitwise and then with decimal numbers.
+        3. What are the broadcast addresses of the first six subnets. Please write them
+        up in binary numbers and in decimal numbers.
+
+
+Task 2
+Given the following network: 123.120.10.20 with a mask of:
+11111111.11110000.00000000.00000000
+
+1. Please convert the mask into decimal numbers
+
+255.240.0.0
+
+The mask can be defined also by mentioning the amount of bits with the value
+“1”. E.g. 141.100.10.20/24 will have a mask of
+11111111.11111111.11111111.00000000. 
+2Please mention the mask of the given network in this way.
+3 Please convert the decimal numbers into bits.
+4 Which is the network part of the address? Please mention this with decimal
+numbers.
+5 Which networks (only in the second byte) can you distinguish? How many hosts
+are available using the whole length of the host section?
+6. Mention the first two networks. Which is the network part? Which hosts (only in
+the second byte) can you identify? Which are the broadcast addresses of these
+networks? Mention them. Take into consideration only the sec
